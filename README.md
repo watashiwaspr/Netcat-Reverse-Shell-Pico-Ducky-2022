@@ -10,4 +10,4 @@ Btw if u r not turkish then u can ignore the following text, eğer türkiyedeki 
 
 If u get any problems please let me know!
 
-Be Secure!
+Stay Secure!
